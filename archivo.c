@@ -3,14 +3,13 @@
 #include "archivo.h"
 #include "ciudades.h"
 
-void leer_archivo(char* arch){
+void leer_archivo(char* arch, ciudad_t* ciudades){
 	FILE* fp = fopen(arch, "r+");
-	int id, i;
-	float coord_x, coord_y;
+	int i;
 	 
 	for (i = 0; i < CANT_CIUDADES; i++){
-		fscanf(fp, "%d,%f,%f\n", &id, &coord_x, &coord_y);
-		printf(" %d %f %f \r\n", id, coord_x, coord_y);
+		fscanf(fp, "%d,%f,%f\n", &ciudades[i].id, &ciudades[i].coord_x, &ciudades[i].coord_y);
+	//	printf(" %d %.20f %.20f \r\n", ciudades[i].id, ciudades[i].coord_x, ciudades[i].coord_y);
 		}
 }
 

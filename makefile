@@ -3,7 +3,7 @@ ARCHIVOS = archivo.o ciudades.o
 PROGRAMA = main
 
 all: $(ARCHIVOS) $(PROGRAMA).o
-	gcc -o $(PROGRAMA) $^
+	gcc -o $(PROGRAMA) $^ -lm
 	./$(PROGRAMA)
 
 %.o: %.c

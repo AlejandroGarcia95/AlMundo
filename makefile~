@@ -1,5 +1,5 @@
 CFLAGS := -std=c99
-ARCHIVOS = archivo.o
+ARCHIVOS = archivo.o ciudades.o
 PROGRAMA = main
 
 all: $(ARCHIVOS) $(PROGRAMA).o
